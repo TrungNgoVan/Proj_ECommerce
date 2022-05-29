@@ -38,24 +38,24 @@ void showMenu(){
 		cout << "--------------------------------------------------------------------\n";
 		switch (option) {
 			case 1:{
-                string ID;
-                cout << "Enter the product ID you want to search: ";
-                cin >> ID;
-                searchProduct(ID);
+                string name;
+                cout << "Enter the product name you want to search: ";
+                cin >> name;
+                searchProductByName(name);
 				break;
 			}
 			case 2: {
                 string type;
                 cout << "Enter the product type you want to filter: ";
                 cin >> type;
-                filterProduct(type);
+                filterProductByType(type);
 				break;
 			}
 			case 3: {
 				string ID;
                 cout << "Enter the product ID you want to see: ";
                 cin >> ID;
-                showProduct(ID);
+                checkProductByID(ID);
 				break;
 			}
 		}

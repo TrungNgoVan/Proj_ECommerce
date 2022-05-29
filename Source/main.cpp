@@ -20,7 +20,10 @@ int main(){
 		switch (option) {
 			case 1:{
                 bool check = loginUser();
-                check ? (cout << "Oke" << endl) : (cout << "No" << endl); 
+                if (check) showMenu();
+                else {
+                    cout << "Login failed !!!";
+                }
 				break;
 			}
 			case 2: {

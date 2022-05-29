@@ -1,7 +1,6 @@
 #pragma once
 #include "product.h"
 
-
 int currentProductQuantity = 2;
 /**
  * @brief Define data
@@ -33,5 +32,44 @@ Product DataProduct[100] = {
         0.01
     }
 };
+//Define method
+void showProduct();
+void searchProductByName();
+void checkProductByID();
 
-void searchProduct(string ID);
+
+
+void showProduct(Product product){
+    cout << "ID: " << product.ID << endl;
+    cout << "Name: " << product.name << endl;
+    cout << "Price: " << product.price << endl;
+    cout << "Weight: " << product.weight << endl;
+    cout << "Height: " << product.height << endl;
+    cout << "Width: " << product.width << endl << endl;
+}
+
+
+void searchProductByName(string name){
+    for (int i = 0; i < currentProductQuantity; i++){
+        if (DataProduct[i].name == name ){
+            showProduct(DataProduct[i]);
+        }
+    }
+}
+
+void filterProductByType(string type){
+    for (int i = 0; i < currentProductQuantity; i++){
+        if (DataProduct[i].type == type ){
+            showProduct(DataProduct[i]);
+        }
+    }
+}
+
+
+void checkProductByID(string ID){
+    for (int i = 0; i < currentProductQuantity; i++){
+        if (DataProduct[i].ID == ID ){
+            showProduct(DataProduct[i]);
+        }
+    }
+}

@@ -1,6 +1,7 @@
-#pragma once
-
+#pragma once 
 #include <iostream>
-
-using namespace std;
-
+#include <string>
+#include "product.h"
+#include "dataProduct.h"
+#include "user.h"
+#include "dataUser.h"

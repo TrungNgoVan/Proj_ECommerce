@@ -1,11 +1,21 @@
 #pragma once
-#include "header.h"
+#include "product.h"
 
-using namespace std;
 
-const int currentProductQuantity = 2;
+int currentProductQuantity = 2;
+/**
+ * @brief Define data
+ * ID,
+ * name,
+ * price,
+ * type (Appliances, SchoolSupplies, Cloth, ElectronicDevice)
+ * weight
+ * height
+ * width
+ */
 Product DataProduct[100] = {
-    {
+    Product {
+        "A1",
         "Table",
         320000,
         "Appliances",
@@ -13,13 +23,15 @@ Product DataProduct[100] = {
         1.4,
         2
     },
-    {
-        "Chair",
-        200000,
-        "Appliances",
-        1.3,
-        1.3,
-        1
+    Product {
+        "S1",
+        "Pencil",
+        12000,
+        "SchoolSupplies",
+        0.2,
+        0.3,
+        0.01
     }
 };
 
+void searchProduct(string ID);
